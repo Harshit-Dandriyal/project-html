@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="menu" id="menu">
+      <div class="nav-item-collapse">New Page</div>
+      <div class="nav-item-collapse">Store 2</div>
+      <div class="nav-item-collapse">Work</div>
+      <div class="nav-item-collapse">About</div>
+      <div class="nav-item-collapse">Contact</div>
+
+      <div class="social-icons-collapsed">
+        <a href="https://instagram.com/your_username" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://twitter.com/your_username" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <div class="nav-container">
+        <p class="logo-text">The Daily Cellar</p>
+        <div class="tab-container">
+          <p class="nav-item">New Page</p>
+          <p class="nav-item">Store 2</p>
+          <p class="nav-item">Work</p>
+          <p class="nav-item">About</p>
+          <p class="nav-item">Contact</p>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="https://instagram.com/your_username" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://twitter.com/your_username" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+      <button class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="container">
+      <p class="head-text">September 21, 2023</p>
+
+      <div class="sub-container">
+        <div class="left-section-landing">
+          <p class="sub-heading">
+            ALEX’S HOT SAUCE - PINEAPPLE HABANERO - KENNEWICK, WA
+          </p>
+
+          <p class="sub-text">
+            Take a minute to write an introduction that is short, sweet, and to
+            the point. If you sell something, use this space to describe it in
+            detail and tell us why we should make a purchase. Tap into your
+            creativity. You’ve got this.Take a minute to write an introduction
+            that is short, sweet, and to the point. If you sell something, use
+            this space to describe it in detail and tell us why we should make a
+            purchase. Tap into your creativity. You’ve got this.Take a minute to
+            write an introduction that is short, sweet, and to the point. If you
+            sell something, use this space to describe it in detail and tell us
+            why we should make a purchase. Tap into youd tell us why we should
+            make a purchase. Tap into your creativity. You’ve got this.Take a
+            minute to write an introduction that is short, sweet, and to the
+            point. $27, 8 oz bottle.
+          </p>
+
+          <p class="buy-now">BUY NOW</p>
+        </div>
+
+        <div class="landing-img-container">
+          <img class="landing-img" src="images/back.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const menu = document.getElementById("menu");
+      const navToggle = document.getElementById("navToggle");
+      const menuOverlay = document.getElementById("menuOverlay");
+      const navIcon = navToggle.querySelector("i");
+
+      navToggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        menuOverlay.classList.toggle("active");
+
+        if (navIcon.classList.contains("fa-bars")) {
+          navIcon.classList.remove("fa-bars");
+          navIcon.classList.add("fa-times");
+        } else {
+          navIcon.classList.remove("fa-times");
+          navIcon.classList.add("fa-bars");
+        }
+      });
+    </script>
+  </body>
+</html>
