@@ -14,6 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
   </head>
+
   <body>
     <div class="menu-overlay" id="menuOverlay"></div>
 
@@ -53,19 +54,32 @@
           ><i class="fab fa-twitter"></i
         ></a>
       </div>
-      <button class="nav-toggle" id="navToggle">
-        <i class="fas fa-bars"></i>
-      </button>
+      <div class="button" id="navToggle">
+        <svg
+          width="48px"
+          height="48px"
+          viewBox="0 0 48 48"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <line x1="0" y1="17" x2="48" y2="17" stroke-width="1" />
+            <line x1="0" y1="31" x2="48" y2="31" stroke-width="1" />
+          </g>
+          <g>
+            <line x1="0" y1="24" x2="48" y2="24" stroke-width="1" />
+            <line x1="0" y1="24" x2="48" y2="24" stroke-width="1" />
+          </g>
+        </svg>
+      </div>
     </div>
     <div class="container">
       <p class="head-text">September 21, 2023</p>
-
       <div class="sub-container">
         <div class="left-section-landing">
           <p class="sub-heading">
             ALEX’S HOT SAUCE - PINEAPPLE HABANERO - KENNEWICK, WA
           </p>
-
           <p class="sub-text">
             Take a minute to write an introduction that is short, sweet, and to
             the point. If you sell something, use this space to describe it in
@@ -81,10 +95,8 @@
             minute to write an introduction that is short, sweet, and to the
             point. $27, 8 oz bottle.
           </p>
-
           <p class="buy-now">BUY NOW</p>
         </div>
-
         <div class="landing-img-container">
           <img class="landing-img" src="images/back.jpg" />
         </div>
@@ -95,18 +107,16 @@
       const menu = document.getElementById("menu");
       const navToggle = document.getElementById("navToggle");
       const menuOverlay = document.getElementById("menuOverlay");
-      const navIcon = navToggle.querySelector("i");
 
       navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("-menu-open");
         menu.classList.toggle("active");
         menuOverlay.classList.toggle("active");
 
-        if (navIcon.classList.contains("fa-bars")) {
-          navIcon.classList.remove("fa-bars");
-          navIcon.classList.add("fa-times");
+        if (document.body.style.overflow !== "hidden") {
+          document.body.style.overflow = "hidden";
         } else {
-          navIcon.classList.remove("fa-times");
-          navIcon.classList.add("fa-bars");
+          document.body.style.overflow = "";
         }
       });
     </script>

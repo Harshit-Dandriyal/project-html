@@ -9,6 +9,7 @@
 }
 
 .container {
+    display: block;
     max-width: 1350px;
     /* This ensures your content doesn't stretch too wide on large screens. Adjust as needed. */
     padding-right: 3%;
@@ -26,7 +27,7 @@ html {
 .sub-container {
     display: flex;
     gap: 10px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .left-section-landing {
@@ -70,33 +71,6 @@ width: 100%;
 }
 
 
-@media (min-width: 1500px) {
-    .head-text {
-        font-size: 10rem;
-        /* This is 8.75% of 700px */
-    }
-      
-}
-
-@media (max-width: 700px) {
-   .sub-container{
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 0;
-   }
-   .left-section-landing{
-    width: 100%;
-   margin-top: 0
-   }
-   .landing-img{
-
-    width: 100vw;
-  margin-left: -10%;
-object-fit: cover;
-   }
- 
-}
-
 
 
 .menu {
@@ -113,7 +87,7 @@ object-fit: cover;
 
 .menu.active {
     display: flex;
-    animation: slideUp 0.2s ease-out ;
+    animation: slideUp 0.2s ease-out;
     height: 100vh;
     gap: 10px;
     padding-top: 20%;
@@ -139,9 +113,6 @@ object-fit: cover;
     text-decoration: underline;
 }
 
-.nav-item {
-
-}
 .nav-toggle {
     background: none;
     border: none;
@@ -158,7 +129,7 @@ object-fit: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2%;
+    padding-top: 2.5%;
     padding-left: 5%;
     position: relative;
     z-index: 11;
@@ -250,7 +221,22 @@ object-fit: cover;
     /* Color on hover */
 }
 /* For screens smaller than 768px, show the hamburger menu */
+.button {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    box-sizing: border-box;
+    height: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
 @media screen and (max-width: 767px) {
+    .button {
+        padding-right: 6%;
+            padding-top: 2%;
+        display: block;
+    }
     .nav-toggle {
         display: block;
         color: gray;
@@ -259,15 +245,43 @@ object-fit: cover;
         font-size: 35px;
 
     }
+        .head-text {
+            font-size: 10vw;
+            position: absolute;
+            margin-top: 5%;
+        }
+        .sub-container {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 0;
+        }
+    
+        .left-section-landing {
+            width: 100%;
+            margin-top: 0
+        }
+    
+        .landing-img {
+    
+            width: 100vw;
+            margin-left: -10%;
+            object-fit: cover;
+        }
     .tab-container{
         display: none;
     }
         .social-icons {
             display: none;
         }
+        .logo-text {
+            font-size: x-large;
+            padding-top: 30px;
+        }
+      
        
 }
 @media screen and (min-width: 767px) {
+
  .menu.active{
 
     display: none;
@@ -275,6 +289,76 @@ object-fit: cover;
  .menu-overlay.active{
     display: none;
  }
+}
+@media (min-width: 1500px) {
+    .head-text {
+        font-size: 10rem;
+        /* This is 8.75% of 700px */
+    }
+
+}
+
+
+.button svg {
+    stroke: #000;
+    transition: 0.2s;
+}
+
+.button svg g:first-child {
+    opacity: 1;
+    transition: opacity 0s 0.2s;
+}
+
+.button svg g:first-child line {
+    transition: transform 0.2s 0.2s;
+    transform: translateY(0px);
+}
+
+.button svg g:last-child {
+    opacity: 0;
+    transition: opacity 0s 0.2s;
+}
+
+.button svg g:last-child line {
+    transition: transform 0.2s;
+    transform: rotate(0deg);
+    transform-origin: center;
+}
+
+.button.-menu-open svg {
+    stroke: #000;
+}
+
+.button.-menu-open svg g:first-child {
+    opacity: 0;
+}
+
+.button.-menu-open svg g:first-child line {
+    transition: transform 0.2s;
+}
+
+.button.-menu-open svg g:first-child line:first-child {
+    transform: translateY(7px);
+}
+
+.button.-menu-open svg g:first-child line:last-child {
+    transform: translateY(-7px);
+}
+
+.button.-menu-open svg g:last-child {
+    opacity: 1;
+}
+
+.button.-menu-open svg g:last-child line {
+    transition: transform 0.2s 0.2s;
+}
+
+.button.-menu-open svg g:last-child line:first-child {
+    transform: rotate(45deg);
+}
+
+.button.-menu-open svg g:last-child line:last-child {
+    transform: rotate(-45deg);
 }
 @keyframes fadeIn {
     from {
