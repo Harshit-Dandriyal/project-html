@@ -50,9 +50,9 @@ width: 100%;
 
 
 .head-text{
-    font-size: 10vw;
+    font-size: 11.5vw;
     position: absolute;
-    margin-top: -3%;
+    margin-top: -2%;
 }
 
 .sub-heading{
@@ -87,6 +87,7 @@ width: 100%;
 
 .menu.active {
     display: flex;
+    font-family: 'EB Garamond', serif;
     animation: slideUp 0.2s ease-out;
     height: 100vh;
     gap: 10px;
@@ -125,7 +126,7 @@ width: 100%;
 
 .navbar {
     overflow: hidden;
-    letter-spacing: .02em;
+ 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,6 +153,7 @@ width: 100%;
 }
 .tab-container {
     display: flex;
+    font-family: 'EB Garamond', serif;
     justify-content: center;
     align-items: center;
     gap: 18px;
@@ -248,7 +250,8 @@ width: 100%;
         .head-text {
             font-size: 10vw;
             position: absolute;
-            margin-top: 5%;
+            margin-top: 2%;
+            margin-left: 20px;
         }
         .sub-container {
             display: flex;
@@ -262,13 +265,14 @@ width: 100%;
         }
     
         .landing-img {
-    
+    height: 35vh;
             width: 100vw;
             margin-left: -10%;
             object-fit: cover;
         }
     .tab-container{
         display: none;
+        font-family: 'EB Garamond', serif;
     }
         .social-icons {
             display: none;
@@ -283,7 +287,7 @@ width: 100%;
 @media screen and (min-width: 767px) {
 
  .menu.active{
-
+font-family: 'EB Garamond', serif;
     display: none;
  }
  .menu-overlay.active{
@@ -292,7 +296,8 @@ width: 100%;
 }
 @media (min-width: 1500px) {
     .head-text {
-        font-size: 10rem;
+        font-size: 10.4rem;
+        
         /* This is 8.75% of 700px */
     }
 
