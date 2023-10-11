@@ -284,13 +284,20 @@ width: 100%;
       
        
 }
+ .container.-hide {
+     display: none;
+ }
 @media screen and (min-width: 767px) {
 
  .menu.active{
 font-family: 'EB Garamond', serif;
     display: none;
  }
+
  .menu-overlay.active{
+    display: none;
+ }
+ .container.-hide{
     display: none;
  }
 }
@@ -365,6 +372,7 @@ font-family: 'EB Garamond', serif;
 .button.-menu-open svg g:last-child line:last-child {
     transform: rotate(-45deg);
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0.5;
