@@ -1,0 +1,87 @@
+.section-2 {
+display: flex; 
+justify-content: center;
+margin-bottom: 100px;
+margin-top: 50px;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.carousel img {
+    min-width: 800px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 7px 7px;
+    cursor: pointer;
+    opacity: 0;
+        /* Initially set to invisible */
+        transition: opacity 0.3s ease;
+        /* Smooth transition */
+}
+.carousel-container:hover .prev,
+.carousel-container:hover .next {
+    opacity: 1;
+    /* Make them visible on hover */
+}
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.pagination-bg {
+    position: absolute;
+    bottom: 0px;
+    /* adjust as needed */
+    left: 0;
+    right: 0;
+    height: 20px;
+    /* adjust the height as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semi-transparent black background */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    /* added this so the transform centers it correctly */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pagination-bar {
+    width: 20px;
+    height: 3px;
+    background-color: grey;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-bar.active {
+    background-color: #FFF;
+}
